@@ -1,0 +1,123 @@
+<%- include('./base/header') %>
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        .vertical-line {
+            border-left: 2px solid #007bff;
+            height: 350px;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%);
+        }
+
+        .left-side,
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-side {
+            margin-right: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .right-side h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .right-side img {
+            width: 150px;
+            margin-top: 20px;
+        }
+
+        .signup-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-5 left-side">
+                <form action="/" method="post">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Email ID</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <a href="/login"><button type="submit" class="submit-btn">Submit</button></a>
+                </form>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="vertical-line"></div>
+
+            <!-- Right Side -->
+            <div class="col-md-5 right-side text-center">
+                <h1>Welcome to RDUM</h1>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUIkLVia3nVOdoy8oAg5GkMTBt6cKgtY1rA&s" alt="RD Engineering College Logo">
+                <a href="/add/user"><button class="signup-btn" type="button">Sign Up</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+
+<%- include('./base/footer') %>
